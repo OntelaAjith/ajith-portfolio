@@ -1,0 +1,560 @@
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 10%;
+
+  background-color: #1e293b;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar heading */
+.navbar h2 {
+  color: #60a5fa;
+}
+
+/* Navigation list */
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+/* Navigation links */
+.navbar a {
+  text-decoration: none;
+  color: #f8fafc;
+  font-size: 15px;
+}
+
+/* Link hover */
+.navbar a:hover {
+  color: #60a5fa;
+}
+
+/* Home Section */
+.home {
+  min-height: 85vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.home-content {
+  max-width: 650px;
+}
+
+.intro-text {
+  color: #60a5fa;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.home h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.home h2 {
+  color: #60a5fa;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.home-description {
+  max-width: 600px;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.secondary-btn {
+  border: 1px solid #60a5fa;
+  color: #60a5fa;
+}
+
+.secondary-btn:hover {
+  background-color: #1e293b;
+}
+
+/* Technology Badges */
+.home-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 350px;
+}
+
+.home-skills span {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+/* About Section */
+.about {
+  background-color: #1e293b;
+}
+
+.about-content {
+  max-width: 900px;
+}
+
+.about-content p {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* Responsive Home Section */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-top: 60px;
+  }
+
+  .home h1 {
+    font-size: 36px;
+  }
+
+  .home h2 {
+    font-size: 22px;
+  }
+
+  .home-description {
+    font-size: 15px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .home-skills {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* Skills Layout */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.skill-category {
+  background-color: #1e293b;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.skill-category h3 {
+  color: #60a5fa;
+  margin-bottom: 15px;
+}
+
+.skill-category ul {
+  padding-left: 20px;
+}
+
+.skill-category li {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+}
+
+/* Projects Layout */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background-color: #1e293b;
+  padding: 25px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  color: #60a5fa;
+  margin-bottom: 12px;
+}
+
+.project-card h4 {
+  margin: 18px 0 10px;
+}
+
+.project-type {
+  color: #60a5fa;
+  font-size: 14px;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-technologies span {
+  background-color: #334155;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+/* Contact Layout */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+}
+
+.contact-info a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: white;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 900px) {
+  .skills-container,
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  section {
+    padding: 55px 6%;
+  }
+
+  .skills-container,
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .home h1 {
+    font-size: 32px;
+  }
+}
+
+
+/* Modern Navbar */
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid #1e293b;
+  backdrop-filter: blur(12px);
+  padding: 18px 10%;
+}
+
+.navbar h2 {
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+.navbar a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+/* Modern Home Design */
+.home {
+  background:
+    radial-gradient(
+      circle at 85% 40%,
+      rgba(37, 99, 235, 0.15),
+      transparent 35%
+    );
+}
+
+.home h1 {
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.home h2 {
+  font-size: 28px;
+  color: #38bdf8;
+}
+
+.home-description {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.home-skills span {
+  border: 1px solid #334155;
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 30px;
+  padding: 12px 18px;
+}
+
+/* Modern Cards */
+.skill-category,
+.project-card,
+.experience-card,
+.certification-card {
+  background: #111c30;
+  border: 1px solid #263449;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.skill-category h3,
+.project-card h3,
+.experience-card h3 {
+  color: #38bdf8;
+}
+
+.skill-category li,
+.experience-card li {
+  line-height: 2;
+}
+
+.project-card {
+  min-height: 280px;
+}
+
+.project-card p {
+  line-height: 1.8;
+}
+
+.project-technologies span,
+.experience-technologies span {
+  background: #1e293b;
+  color: #7dd3fc;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+/* Button Design */
+.primary-btn,
+.secondary-btn {
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #0891b2);
+  color: white;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* Card Hover Effects */
+.skill-category,
+.project-card,
+.experience-card,
+.certification-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-category:hover,
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Home animation */
+.home-content {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.home-skills {
+  animation: fadeIn 1.6s ease forwards;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typing Effect */
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #38bdf8;
+  width: 0;
+  animation:
+    typing 3s steps(22) 0.5s forwards,
+    blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background-color: #0f172a;
+    border-bottom: 1px solid #334155;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+}
